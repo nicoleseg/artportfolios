@@ -2,7 +2,7 @@ var sqlite3 = require('sqlite3').verbose();
 var db = new sqlite3.Database('example.db');
 
 db.run("PRAGMA foreign_keys = ON;"); //enables foreign keys in sqlite3
-//get all garages or any thing that actually is being measured
+//get all garages or any thing that actually is being measured. need to at least be logs.db
 db.all('SELECT * FROM garages', function(err, rows){
   if(err){
     console.log(err);
